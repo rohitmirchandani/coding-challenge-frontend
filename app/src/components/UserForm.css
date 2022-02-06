@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.form-div {
+  font-family: sans-serif;
+  font-size: 2rem;
+}
+.userlabel {
+  width: 100%;
+  float: left;
+  text-align: start;
+  margin-left: 30px;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+.users-div {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  background-color: #eee;
+  margin: 30px;
+  height: 150px;
+  align-items: center;
+}
+.user-div {
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+  min-width: 200px;
+  height: 100px;
+}
+.user-div label {
+  border: 2px solid lightgray;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  background-color: whitesmoke;
+  cursor: pointer;
+}
+.user-div label:hover {
+  background-color: #eee;
+}
+.user-div input[type="radio"]:checked + label {
+  background-color: rgb(167, 216, 247);
+  border: 2px solid rgb(95, 189, 226);
+}
+.user-div input[type="radio"]:checked + label:hover {
+  background: rgb(152, 208, 243);
+}
+::-webkit-scrollbar {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: lightgray;
+  border-radius: 10px;
+}
+
+.map-form-div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+#map {
+  width: 1000px;
+  height: 600px;
+}
+.marker {
+  font-family: sans-serif;
+  color: rgb(180, 3, 3);
+  background-color: white;
+  width: min-content;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+.marker::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  bottom: -10px;
+  left: 50%;
+  background: white;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  max-width: 800px;
+}
+.title-div,
+.body-div {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+.title-div input,
+.body-div textarea {
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  background-color: whitesmoke;
+}
+textarea {
+  height: 100px;
+}
+.body-div textarea {
+  resize: none;
+}
+input[type="submit"] {
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  background-color: rgb(164, 218, 252);
+  width: 80%;
+  text-transform: capitalize;
+  border: 1px solid gray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: lightskyblue;
+}
+.warning {
+  padding: 10px;
+  background: rgb(230, 103, 103);
+  width: 80%;
+  margin: 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.hide {
+  display: none !important ;
+}
+.error-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.error-div p {
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  background-color: darkred;
+  color: lightgray;
+}
+.error-div button {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: inherit;
+}
+.error-div button:hover {
+  text-decoration: underline;
+}
